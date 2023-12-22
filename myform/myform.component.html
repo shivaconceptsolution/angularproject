@@ -1,0 +1,28 @@
+<p>myform works!</p>
+<hr/>
+<select [(ngModel)]="course">
+    <option value="">Select Course </option>
+    <option *ngFor="let c of courses" [value]="c">{{c}}</option>
+</select>
+   <br/><br/>
+   <p>Select Course</p>
+   <select [(ngModel)]="course1" multiple>
+    
+    <option *ngFor="let c of courses" [value]="c">{{c}}</option>
+  </select>
+   <br/><br/>
+   
+   <div *ngFor="let option of basiccourse">
+    <input type="radio" name="options" [(ngModel)]="selectedCourse" [value]="option">
+    {{ option }}
+  </div>
+  
+   <br/><br/>
+   <div *ngFor="let option of advancecourse">
+   <input type="checkbox" name="options" [(ngModel)]="basic1" [value]="option"  (change)="onCheckboxChange(option)" />{{ option }} <br/>
+   
+  </div>
+ 
+    <input type="button" value="Submit" (click)="displayData()" />
+  <br>
+  {{result}}

@@ -1,0 +1,17 @@
+<p>access-url works!</p>
+<ul class="list-group">
+    <li 
+        *ngFor="let post of posts"
+        class="list-group-item">
+        {{ post.rno }}   ||  {{ post.name }}
+    </li>
+  </ul>
+  <input type="button" value="Find" (click)="findPosts()" />
+  <br/>
+  <input type="button" value="View" (click)="viewData()" />
+  <br/>
+  <input type="button" value="Insert" (click)="submitData()" />
+  <br/>
+  <input type="button" value="Update" (click)="submitData1()" />
+  <br />
+  <input type="button" value="Delete" (click)="submitData2()" />
